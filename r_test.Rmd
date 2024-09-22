@@ -1,0 +1,62 @@
+---
+title: "National Geographic Research grant"
+output: revealjs::revealjs_presentation
+---
+
+## Data Science in Agriculture Research
+
+Data science plays a crucial role in enhancing agricultural practices by:
+
+Precision Agriculture: Utilizing data from sensors and satellites to optimize crop yields and reduce waste.
+
+Predictive Analytics: Analyzing historical data to forecast crop performance and pest outbreaks.
+
+Soil Health Monitoring: Leveraging data to assess soil quality and recommend interventions.
+
+Supply Chain Optimization: Enhancing logistics and distribution through data-driven insights.
+
+## What is Data Science
+
+-   Data science is an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from structured and unstructured data.
+
+## Slide with Plot
+
+```{r}
+library(ggplot2)
+
+# Create a data frame with hypothetical data
+data <- data.frame(
+  Year = 2015:2021,  # Adjusted to match the length of Interest
+  Interest = c(20, 30, 50, 70, 85, 90, 100)  # Hypothetical interest levels
+)
+
+# Create the line chart
+ggplot(data, aes(x = Year, y = Interest)) +
+  geom_line(color = "blue", size = 1.5) +
+  geom_point(color = "red", size = 3) +
+  labs(title = "Growth of Data Science Interest Over Years",
+       x = "Year",
+       y = "Interest Level") +
+  theme_minimal() +
+  scale_y_continuous(breaks = seq(0, 100, 10))
+```
+
+## Slide with R Code and Output
+
+```{r, echo=FALSE}
+library(ggplot2)
+
+# Create a data frame with hypothetical data
+data <- data.frame(
+  Language = c("R", "Python"),
+  Popularity = c(60, 90)  # Hypothetical popularity scores
+)
+
+# Create the plot
+ggplot(data, aes(x = Language, y = Popularity, fill = Language)) +
+  geom_bar(stat = "identity") +
+  labs(title = "Popularity of R vs Python in Data Science",
+       x = "Programming Language",
+       y = "Popularity Score") +
+  theme_minimal()
+```
